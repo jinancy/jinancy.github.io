@@ -1,0 +1,14 @@
+body, html {
+    background-image: url("assets/images/background.jpg");
+    font-family: avenir;
+    height: 100%;
+    margin: 0;
+}
+
+.home_bg {
+	background-image: url("assets/images/background.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

@@ -1,0 +1,199 @@
+body, html {
+    /* background-color: rgb(32,32,32); */
+    font-family: avenir;
+    height: 100%;
+    margin: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 40px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: rgb(50, 50, 50);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: lightgray;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+/* for smaller screens */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+.home_bg {
+    background-image: url("../images/background.jpg");
+    background-color: rgb(32,32,32);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_bg {
+    background-image: url("../images/about.jpg");
+    background-color: rgb(32,32,32);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Libre Baskerville";
+    font-size: 60px;
+    font-weight: normal;
+    font-stretch: ultra-expanded;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* cursor */
+    border-right: solid 3px white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+h1 {
+    animation: animated-text 2s steps(15, end) 1s 1 normal both,
+    animated-cursor 1s steps(15, end) infinite;
+}
+
+h1.about-me{
+    top: 10%;
+    animation: animated-text2 2s steps(15, end) 1s 1 normal both,
+    animated-cursor 1s steps(15, end) infinite;
+}
+
+h1.fun {
+    top: 10%;
+    animation: animated-text3 2s steps(15, end) 1s 1 normal both,
+    animated-cursor 1s steps(15, end) infinite;
+}
+
+/* text animation */
+/* calculated font-width 362px */
+@keyframes animated-text {
+    from{width: 0;}
+    to{width: 362px;}
+}
+
+@keyframes animated-text2 {
+    from{width: 0;}
+    to{width: 410px;}
+}
+
+@keyframes animated-text3 {
+    from{width: 0;}
+    to{width: 155px;}
+}
+
+/* cursor animations */
+@keyframes animated-cursor {
+    from{border-right-color: white;}
+    to{border-right-color: transparent;}
+}
+
+p {
+    font-family: Avenir, sans-serif;
+    font-size: 20px;
+    top: 40%;
+    align-self: center;
+    position: absolute;
+    margin-right: 20%;
+    margin-left: 20%;
+    color: white;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+
+}
+.nav--button {
+    height: 200px;
+    width: 200px;
+    background-image: url("../images/button-1.jpg");
+    background-size: cover;
+    border: 1px solid #383838;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: 30px;
+    opacity: 0.75;
+}
+
+.b2 {
+    background-image: url("../images/button-2.jpg");
+}
+
+.b3 {
+    background-image: url("../images/button-3.jpg");
+}
+
+.nav--button a {
+    display: block;
+    width: 100%;
+    font-family: "Libre Baskerville";
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    font-size: 25px;
+    overflow: visible;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 1;
+    background-color: rgb(32,32,32, 0.5);
+}
+
+.nav--button:hover {
+    opacity: 1;
+}
